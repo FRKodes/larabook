@@ -20,3 +20,5 @@ $I->seeRecord('users',[
 	'username' => 'tonyCalderon',
 	'email' => 'tony@example.com'
 	]);
+
+$I->assertTrue(Auth::check());
