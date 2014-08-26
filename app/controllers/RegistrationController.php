@@ -23,6 +23,8 @@ class RegistrationController extends BaseController {
 
 		$this->RegistrationForm = $RegistrationForm;
 
+		$this->beforeFilter('guest');
+
 	}
 	/**
 	 * Show the form for creating a new resource.
@@ -49,7 +51,7 @@ class RegistrationController extends BaseController {
 
 		Flash::overlay('Glad to have you as a new Larabook member');
 		
-		return Redirect::home()->with('flash_message','Welcome aboard!');
+		return Redirect::home();
 
 	}
 
